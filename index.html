@@ -37,7 +37,7 @@
         /* หัวข้อ PENNALES แบบเรืองแสงและขยับซ้ายขวา */
         .header-section {
             margin-bottom: 30px;
-            animation: moveSide 4s ease-in-out infinite; /* ขยับซ้ายขวา */
+            animation: moveSide 4s ease-in-out infinite;
         }
 
         .header-title {
@@ -48,7 +48,6 @@
             text-transform: uppercase;
             margin: 0;
             color: #fff;
-            /* เรืองแสงสีขาวฟุ้งๆ */
             text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
                          0 0 20px rgba(255, 255, 255, 0.5),
                          0 0 30px rgba(255, 255, 255, 0.3);
@@ -63,7 +62,6 @@
             text-transform: uppercase;
         }
 
-        /* Animation ขยับซ้ายขวา */
         @keyframes moveSide {
             0%, 100% { transform: translateX(0); }
             50% { transform: translateX(15px); }
@@ -96,14 +94,14 @@
             text-transform: uppercase;
         }
 
-        /* สไตล์ปุ่ม */
+        /* สไตล์ปุ่มแบบยืดหดตามคำ (Fit Content) */
         .btn {
             display: inline-flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            min-width: 220px;
-            padding: 18px 50px;
+            /* ปรับ Padding เพื่อให้ป้ายดูสมดุลกับตัวอักษร */
+            padding: 15px 35px; 
             margin: 8px auto;
             background: rgba(15, 15, 15, 0.95);
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -112,6 +110,7 @@
             text-decoration: none;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+            /* ลบ min-width ออกเพื่อให้ขนาดพอดีกับคำ */
         }
 
         .btn:hover {
@@ -127,6 +126,7 @@
             letter-spacing: 3px;
             font-weight: bold;
             text-transform: uppercase;
+            white-space: nowrap; /* ป้องกันคำแยกบรรทัด */
         }
 
         /* ส่วนท้าย */
