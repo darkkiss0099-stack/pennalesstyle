@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PENNALESBOYZ</title>
+    <style>
+        /* ตั้งค่าพื้นหลังและ Font */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://img5.pic.in.th/file/secure-sv1/o94006ecb177242be.th.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        /* หัวข้อด้านบนสุด */
+        .header-title {
+            position: absolute;
+            top: 20px;
+            font-size: 24px;
+            letter-spacing: 5px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        /* ส่วนคอนเทนเนอร์ปุ่ม */
+        .container {
+            text-align: center;
+            z-index: 1;
+        }
+
+        .logo-placeholder {
+            font-size: 50px;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        /* สไตล์ปุ่ม */
+        .btn {
+            display: block;
+            width: 280px;
+            padding: 15px;
+            margin: 10px auto;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+        }
+
+        .btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        /* ส่วนท้าย */
+        .footer {
+            position: absolute;
+            bottom: 20px;
+            font-size: 12px;
+            letter-spacing: 1px;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* เอฟเฟกต์ตัวอักษรจางๆ ด้านหลัง (Optional) */
+        .bg-text {
+            position: fixed;
+            font-size: 10vw;
+            font-weight: bold;
+            color: rgba(255, 255, 255, 0.03);
+            z-index: 0;
+            user-select: none;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-title">PENNALESBOYZ</div>
+
+    <div class="bg-text">PENNALES</div>
+
+    <div class="container">
+        <div class="logo-placeholder">👑</div>
+        
+        <a href="#" class="btn">PENNALESBOYZ</a>
+        <a href="#" class="btn">MEMBER PENNALES</a>
+    </div>
+
+    <div class="footer">
+        © 2026 DERNYOUNGSAY — <a href="https://www.google.com" target="_blank">Oshi</a>
+    </div>
+
+</body>
+</html>
