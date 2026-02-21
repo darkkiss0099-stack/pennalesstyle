@@ -11,7 +11,6 @@
             margin: 0;
             padding: 0;
             font-family: 'Segoe UI', sans-serif;
-            /* พื้นหลังรูปภาพตามที่ระบุ */
             background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
                         url('https://img5.pic.in.th/file/secure-sv1/o94006ecb177242be.th.png');
             background-size: cover;
@@ -26,7 +25,6 @@
             overflow: hidden;
         }
 
-        /* หัวข้อด้านบนแบบเรืองแสงสไตล์ DERNYOUNGSAY */
         .header-title {
             position: absolute;
             top: 60px;
@@ -42,17 +40,20 @@
             text-align: center;
             z-index: 1;
             margin-top: 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* จัดให้ป้ายอยู่กึ่งกลาง */
         }
 
-        /* สไตล์ปุ่มดำสนิท ขอบมน */
+        /* สไตล์ปุ่มแบบปรับขนาดตามตัวอักษร (Auto Width) */
         .btn {
-            display: flex;
+            display: inline-flex; /* เปลี่ยนจาก flex เป็น inline-flex เพื่อให้กว้างตามเนื้อหา */
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            width: 350px;
-            padding: 20px;
-            margin: 20px auto;
+            min-width: 180px; /* กำหนดความกว้างขั้นต่ำไว้เล็กน้อย */
+            padding: 15px 40px; /* เพิ่ม Padding ซ้าย-ขวา ให้ดูมีพื้นที่พอดีกับคำ */
+            margin: 10px auto;
             background: rgba(15, 15, 15, 0.9);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 12px;
@@ -69,16 +70,15 @@
             box-shadow: 0 15px 40px rgba(0,0,0,0.7);
         }
 
-        /* ข้อความหลักในปุ่ม */
         .btn-main-text {
             font-family: 'Orbitron', sans-serif;
             font-size: 18px;
             letter-spacing: 3px;
             font-weight: bold;
             text-transform: uppercase;
+            white-space: nowrap; /* ป้องกันตัวหนังสือขึ้นบรรทัดใหม่ */
         }
 
-        /* ส่วนท้าย (Footer) */
         .footer {
             position: absolute;
             bottom: 30px;
