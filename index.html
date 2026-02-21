@@ -42,18 +42,46 @@
             margin-top: 80px;
             display: flex;
             flex-direction: column;
-            align-items: center; /* จัดให้ป้ายอยู่กึ่งกลาง */
+            align-items: center;
         }
 
-        /* สไตล์ปุ่มแบบปรับขนาดตามตัวอักษร (Auto Width) */
+        /* สไตล์เส้นคั่นแบบในรูปตัวอย่าง */
+        .partner-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 300px;
+            margin: 15px 0;
+        }
+
+        .partner-divider::before, .partner-divider::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(to var(--direction, right), transparent, rgba(255, 255, 255, 0.3));
+        }
+        
+        .partner-divider::after {
+            --direction: left;
+        }
+
+        .partner-text {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 10px;
+            letter-spacing: 5px;
+            color: rgba(255, 255, 255, 0.5);
+            margin: 0 15px;
+            text-transform: uppercase;
+        }
+
         .btn {
-            display: inline-flex; /* เปลี่ยนจาก flex เป็น inline-flex เพื่อให้กว้างตามเนื้อหา */
+            display: inline-flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            min-width: 180px; /* กำหนดความกว้างขั้นต่ำไว้เล็กน้อย */
-            padding: 15px 40px; /* เพิ่ม Padding ซ้าย-ขวา ให้ดูมีพื้นที่พอดีกับคำ */
-            margin: 10px auto;
+            min-width: 180px;
+            padding: 15px 40px;
+            margin: 5px auto;
             background: rgba(15, 15, 15, 0.9);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 12px;
@@ -76,7 +104,7 @@
             letter-spacing: 3px;
             font-weight: bold;
             text-transform: uppercase;
-            white-space: nowrap; /* ป้องกันตัวหนังสือขึ้นบรรทัดใหม่ */
+            white-space: nowrap;
         }
 
         .footer {
@@ -109,13 +137,17 @@
             <span class="btn-main-text">PENNALES GANGS</span>
         </a>
 
+        <div class="partner-divider">
+            <span class="partner-text">PENNALES</span>
+        </div>
+
         <a href="http://pennales.changretta.site/" class="btn" target="_blank">
             <span class="btn-main-text">MEMBER</span>
         </a>
     </div>
 
     <div class="footer">
-        © 2026 PENNALES NEW STAR — <a href="https://www.facebook.com/oshi.changretta" target="_blank">Oshi</a>
+        © 2026 DERNYOUNGSAY — <a href="https://www.facebook.com/oshi.changretta" target="_blank">Oshi</a>
     </div>
 
 </body>
