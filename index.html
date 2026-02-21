@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PENNALESBOYZ</title>
     <style>
-        /* ตั้งค่าพื้นหลังและ Font */
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
         body {
             margin: 0;
             padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            /* พื้นหลังรูปภาพที่คุณส่งมา */
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
                         url('https://img5.pic.in.th/file/secure-sv1/o94006ecb177242be.th.png');
             background-size: cover;
             background-position: center;
@@ -25,100 +25,107 @@
             overflow: hidden;
         }
 
-        /* หัวข้อด้านบนสุด */
+        /* หัวข้อด้านบนแบบเรืองแสง */
         .header-title {
             position: absolute;
-            top: 40px;
-            font-size: 26px;
-            letter-spacing: 4px;
-            font-weight: 600;
+            top: 60px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 48px;
+            letter-spacing: 8px;
+            font-weight: bold;
             text-transform: uppercase;
-            opacity: 0.9;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
         }
 
-        /* ส่วนคอนเทนเนอร์ปุ่ม */
         .container {
             text-align: center;
             z-index: 1;
-            margin-top: 50px;
+            margin-top: 80px;
         }
 
-        .logo-placeholder {
-            font-size: 60px;
-            margin-bottom: 30px;
-            display: block;
-            opacity: 0.5;
-        }
-
-        /* สไตล์ปุ่ม (ปรับตามรูปภาพตัวอย่าง) */
+        /* สไตล์ปุ่มแบบ DERNYOUNGSAY */
         .btn {
-            display: block;
-            width: 320px; /* ขยายความกว้าง */
-            padding: 12px 20px; /* ปรับความสูงให้ดูแบนลงตามรูป */
-            margin: 15px auto;
-            background: #333235; /* สีเทาเข้มแบบในรูป */
-            border: 1px solid #444346; /* ขอบสีอ่อนกว่าพื้นหลังเล็กน้อย */
-            border-radius: 8px; /* ความโค้งมน */
-            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 350px;
+            padding: 20px;
+            margin: 20px auto;
+            background: rgba(15, 15, 15, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            color: white;
             text-decoration: none;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            font-size: 15px;
-            font-weight: 400;
-            transition: all 0.2s ease-in-out;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* เพิ่มมิติ */
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
         .btn:hover {
-            background: #403f42;
-            transform: scale(1.02);
-            border-color: #555457;
+            background: rgba(30, 30, 30, 1);
+            border-color: rgba(255, 255, 255, 0.3);
+            transform: translateY(-5px);
         }
 
-        /* ส่วนท้าย */
+        /* ข้อความหลักในปุ่ม */
+        .btn-main-text {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 18px;
+            letter-spacing: 3px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        /* ข้อความรองในปุ่ม */
+        .btn-sub-text {
+            font-size: 10px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.4);
+            margin-top: 5px;
+        }
+
+        /* เส้นแบ่ง Partner (ถ้ามี) */
+        .divider {
+            width: 100px;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.1);
+            margin: 10px auto;
+        }
+
         .footer {
             position: absolute;
             bottom: 30px;
             font-size: 13px;
             letter-spacing: 1px;
-            color: rgba(255, 255, 255, 0.5);
+            color: rgba(255, 255, 255, 0.4);
         }
 
         .footer a {
-            color: rgba(255, 255, 255, 0.8);
+            color: rgba(255, 255, 255, 0.7);
             text-decoration: none;
             font-weight: bold;
         }
 
         .footer a:hover {
             color: #fff;
-            text-decoration: underline;
-        }
-
-        /* ตัวอักษรลายน้ำด้านหลัง */
-        .bg-text {
-            position: fixed;
-            font-size: 12vw;
-            font-weight: bold;
-            color: rgba(255, 255, 255, 0.02);
-            z-index: 0;
-            user-select: none;
-            font-style: italic;
-            pointer-events: none;
         }
     </style>
 </head>
 <body>
 
-    <div class="header-title">PENNALESBOYZ</div>
-
-    <div class="bg-text">PENNALES</div>
+    <div class="header-title">PENNALES</div>
 
     <div class="container">
-        <div class="logo-placeholder">👑</div>
-        
-        <a href="#" class="btn">PENNALESBOYZ</a>
-        <a href="#" class="btn">MEMBER PENNALES</a>
+        <a href="#" class="btn">
+            <span class="btn-main-text">PENNALESBOYZ</span>
+            <span class="btn-sub-text">MEMBER</span>
+        </a>
+
+        <a href="#" class="btn">
+            <span class="btn-main-text">MEMBER PENNALES</span>
+            <span class="btn-sub-text">PARTNER</span>
+        </a>
     </div>
 
     <div class="footer">
